@@ -6,16 +6,16 @@
 
 @font-face {
     font-family: OpenSans;
-    src: url(../fonts/OpenSans-Regular.woff) format("woff");
-    src: url(../fonts/OpenSans-Regular.woff2) format("woff2");
+    src: url("../fonts/OpenSans-Regular.woff") format("woff");
+    src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: OpenSans;
-    src: url(../fonts/OpenSans-Bold.woff) format("woff");
-    src: url(../fonts/OpenSans-Bold.woff2) format("woff2");
+    src: url("../fonts/OpenSans-Bold.woff") format("woff");
+    src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: bold;
 }
@@ -55,7 +55,7 @@ div.hidden {
     height: 28px;
     display: block;
 
-    background-image: url(../svg/form-x.svg);
+    background-image: url("../svg/form-x.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background: transparent;
@@ -90,7 +90,7 @@ div.hidden {
 .radio-text::before {
     content: "";
     display: inline-flex;
-    background-image: url(../svg/form-empty-circle.svg);
+    background-image: url("../svg/form-empty-circle.svg");
     height: 18px;
     width: 18px;
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ div.hidden {
 }
 
 .radio-button:checked ~ .radio-text:before {
-    background-image: url(../svg/form-circle.svg);
+    background-image: url("../svg/form-circle.svg");
 }
 
 .field {
@@ -126,7 +126,7 @@ div.hidden {
 }
 
 select.field {
-    background-image: url(../svg/form-arrows.svg);
+    background-image: url("../svg/form-arrows.svg");
     background-size: 10px auto;
     background-repeat: no-repeat;
     background-position: right 13px center;
@@ -170,7 +170,7 @@ textarea.field {
 
 .header {
     background-color: #000000;
-    background-image: url(../images/banner-bg.jpg);
+    background-image: url("../images/banner-bg.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
