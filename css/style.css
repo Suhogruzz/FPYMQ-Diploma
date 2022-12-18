@@ -14,8 +14,8 @@
 
 @font-face {
     font-family: OpenSans;
-    src: url(fonts/OpenSans-Bold.woff) format("woff");
-    src: url(fonts/OpenSans-Bold.woff2) format("woff2");
+    src: url(./fonts/OpenSans-Bold.woff) format("woff");
+    src: url(./fonts/OpenSans-Bold.woff2) format("woff2");
     font-weight: 700;
     font-style: bold;
 }
@@ -55,7 +55,7 @@ div.hidden {
     height: 28px;
     display: block;
 
-    background-image: url(svg/form-x.svg);
+    background-image: url(./svg/form-x.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background: transparent;
@@ -90,7 +90,7 @@ div.hidden {
 .radio-text::before {
     content: "";
     display: inline-flex;
-    background-image: url(svg/form-empty-circle.svg);
+    background-image: url(./svg/form-empty-circle.svg);
     height: 18px;
     width: 18px;
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ div.hidden {
 }
 
 .radio-button:checked ~ .radio-text:before {
-    background-image: url(svg/form-circle.svg);
+    background-image: url(./svg/form-circle.svg);
 }
 
 .field {
@@ -126,7 +126,7 @@ div.hidden {
 }
 
 select.field {
-    background-image: url(svg/form-arrows.svg);
+    background-image: url(./svg/form-arrows.svg);
     background-size: 10px auto;
     background-repeat: no-repeat;
     background-position: right 13px center;
@@ -170,7 +170,7 @@ textarea.field {
 
 .header {
     background-color: #000000;
-    background-image: url("images/banner-bg.jpg");
+    background-image: url("./images/banner-bg.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -278,19 +278,19 @@ textarea.field {
 }
   
 .trend-garden {
-    background-image: url("images/trend1.jpg");
+    background-image: url("./images/trend1.jpg");
 }
   
 .trend-cheese {
-    background-image: url("images/trend2.jpg");
+    background-image: url("./images/trend2.jpg");
 }
   
 .trend-hiking {
-    background-image: url("images/trend3.jpg");
+    background-image: url("./images/trend3.jpg");
 }
   
 .trend-lemons {
-    background-image: url("images/trend4.jpg");
+    background-image: url("./images/trend4.jpg");
 }
   
 .trends-card {
@@ -462,7 +462,7 @@ textarea.field {
     display: inline-block;
     width: 47px;
     
-    background-image: url("svg/search.svg");
+    background-image: url("./svg/search.svg");
     background-repeat: no-repeat;
     background-size: 19px auto;
     background-position: center center;
@@ -645,23 +645,23 @@ textarea.field {
 }
   
 .social-icon__twitter {
-    background-image: url("svg/004-twitter.svg");
+    background-image: url("./svg/004-twitter.svg");
 }
   
 .social-icon__pinterest {
-    background-image: url("svg/001-pinterest.svg");
+    background-image: url("./svg/001-pinterest.svg");
 }
   
 .social-icon__facebook {
-    background-image: url("svg/002-facebook-logo.svg");
+    background-image: url("./svg/002-facebook-logo.svg");
 }
   
 .social-icon__instagram {
-    background-image: url("svg/005-instagram.svg");
+    background-image: url("./svg/005-instagram.svg");
 }
   
 .social-icon__tumblr {
-    background-image: url("svg/003-tumblr.svg");
+    background-image: url("./svg/003-tumblr.svg");
 }
   
 .copyright {
@@ -882,7 +882,7 @@ textarea.field {
 @media (min-width: 641px) and (max-width: 1050px) {
   
     .header {
-        background-image: url("images/banner-bg-tablet.jpg");
+        background-image: url("./images/banner-bg-tablet.jpg");
         padding-top: 45px;
     }
   
@@ -944,7 +944,7 @@ textarea.field {
     }
   
     .header {
-        background-image: url("images/banner-mobile.jpg");
+        background-image: url("./images/banner-mobile.jpg");
         padding-top: 30px;
         padding-bottom: 210px;
     }
