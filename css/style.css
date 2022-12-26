@@ -676,14 +676,16 @@ textarea.field {
     font-weight: bold;
 }
 
-.trends-card-wrapper:nth-child(n+2) {
-    margin-left: 4px;
-}
+
 
 @media (min-width: 1200px) {
   
     .menu-button {
         display: none;
+    }
+
+    .trends-card-wrapper:nth-child(n+2) {
+        margin-left: 4px;
     }
 }
 
@@ -853,6 +855,12 @@ textarea.field {
   
     .copyright {
         margin-top: 20px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation:landscape) {
+    .trends-card-wrapper:nth-child(n+2) {
+        margin-left: 4px;
     }
 }
 
