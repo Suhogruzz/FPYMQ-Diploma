@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="popup hidden"> 
+	<div id="popup-id" class="popup"> 
 		<div class="popup-wrapper">
 			<button class="close-button" type="button">
 				<span class="visually-hidden">Закрыть окно</span>
@@ -482,4 +482,9 @@
 		</div>
 	</footer>
 </body>
+<script>
+document.querySelector(".close-button").addEventListener("click", () => {
+	document.getElementById("popup-id").className = "popup hidden";
+})
+</script>
 </html>
