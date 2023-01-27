@@ -70,6 +70,8 @@ div.hidden {
 }
 
 .feedback {
+    width: 100vh;
+    box-sizing: border-box;
     background-color: #ffffffff;
     max-width: 390px;
     padding: 28px 25px 32px;
@@ -866,34 +868,57 @@ textarea.field {
     .copyright {
         margin-top: 20px;
     }
-}
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation:landscape) {
-    .trends-card-wrapper:nth-child(n+2) {
-        margin-left: 4px;
+    @media only screen and (min-height: 641px) and (orientation: landscape)  {
+        .trends-card-wrapper:nth-child(n+2) {
+            margin-left: 4px;
+        }
+    }
+    
+    @media only screen and (min-height: 641px) and (orientation: portrait) {
+        .trends {
+            margin-top: 18px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    
+        .trends-card-wrapper {
+            flex-basis: 49%;
+            flex-grow: 1;
+            min-height: 247px;
+            padding: 15px 19px;
+            margin-top: 0; 
+            margin-bottom: 4px;
+        }
+    
+        .trends-card-wrapper:nth-child(2n+1) {
+            margin-right: 4px;
+        }
+    }
+
+    @media screen and (max-height: 641px) and (orientation: landscape) {
+        .trends-card-wrapper {
+            flex-basis: 49%;
+            flex-grow: 1;
+            min-height: 247px;
+            padding: 15px 19px;
+            margin-top: 0; 
+            margin-bottom: 4px;
+        }
+        
+        .trends-card-wrapper:nth-child(2n+1) {
+            margin-right: 4px;
+        }
+      
+        .trends {
+            margin-top: 18px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 }
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation:portrait) {
-    .trends {
-        margin-top: 18px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
 
-    .trends-card-wrapper {
-        flex-basis: 49%;
-        flex-grow: 1;
-        min-height: 247px;
-        padding: 15px 19px;
-        margin-top: 0; 
-        margin-bottom: 4px;
-    }
-
-    .trends-card-wrapper:nth-child(2n+1) {
-        margin-right: 4px;
-    }
-}
   
 @media (min-width: 641px) and (max-width: 1050px) {
   
@@ -1106,31 +1131,10 @@ textarea.field {
     .copyright {
         margin: 45px auto 45px;
     }
-}
-
-@media (max-width: 640px) and (orientation:landscape) {
-    .trends-card-wrapper {
-        flex-basis: 49%;
-        flex-grow: 1;
-        min-height: 247px;
-        padding: 15px 19px;
-        margin-top: 0; 
-        margin-bottom: 4px;
-    }
     
-    .trends-card-wrapper:nth-child(2n+1) {
-        margin-right: 4px;
-    }
-  
-    .trends {
-        margin-top: 18px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 640px) and (orientation:portrait) {
-    .trends{
-        flex-direction: column;
+    @media screen and (orientation: portrait) {
+        .trends{
+            flex-direction: column;
+        }
     }
 }
