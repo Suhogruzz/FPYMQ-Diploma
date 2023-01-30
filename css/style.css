@@ -38,6 +38,8 @@ div.hidden {
 
 .popup-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .popup {
@@ -54,12 +56,10 @@ div.hidden {
 }
 
 .close-button {
-    position: absolute;
-    top: -35px;
-    left: 362px;
+    margin-bottom: 2%;
+    align-self: flex-end;
     width: 28px;
     height: 28px;
-    display: block;
 
     background-image: url("../svg/form-x.svg");
     background-size: contain;
@@ -70,7 +70,6 @@ div.hidden {
 }
 
 .feedback {
-    width: 100vh;
     box-sizing: border-box;
     background-color: #ffffffff;
     max-width: 390px;
@@ -84,7 +83,7 @@ div.hidden {
 .form-hint {
     display: flex;
     font-size: 13px;
-    margin: 23px 0 9px;
+    margin: 25px 0 9px;
 }
 
 .radio-button {
@@ -96,17 +95,17 @@ div.hidden {
 
 .radio-text {
     font-size: 13px;
-    margin-right: 15px;
+    margin-right: 30px;
 }
 
 .radio-text::before {
     content: "";
     display: inline-flex;
     background-image: url("../svg/form-empty-circle.svg");
-    height: 18px;
-    width: 18px;
+    height: 25px;
+    width: 25px;
     background-repeat: no-repeat;
-    background-size: 18px;
+    background-size: 25px;
     vertical-align: middle;
     margin-right: 5px
 }
@@ -181,7 +180,7 @@ textarea.field {
 
 .header {
     background-color: #000000;
-    background-image: url("../images/banner-bg.jpg");
+    background-image: url("../images/banner-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -190,10 +189,10 @@ textarea.field {
     z-index: 0;
     
     padding-top: 30px;
-    padding-bottom: 125px;
+    padding-bottom: 210px;
     font-family: OpenSans, sans-serif;
 }
-  
+
 .header:after, .trends-card-wrapper:after {
     content: "";
     position: absolute;
@@ -206,7 +205,7 @@ textarea.field {
     
     z-index: -1;
 }
-  
+
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -216,59 +215,169 @@ textarea.field {
     justify-content: space-between;
     align-items: center;
 }
-  
+
 .logo {
-    width: 180px;
+    width: 270px;
 }
-  
+
 .menu-list {
+    display: none;
+}
+
+.menu {
     display: flex;
-    list-style-type: none;
-    font-size: 13px;
 }
-  
-.menu-list-item:nth-child(n+2) {
-    margin-left: 35px;
+
+.menu-button {
+    border: none;
+    width: 22px;
+    height: 19px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
 }
-  
-.menu-list-item:hover {
-    text-decoration: underline;
+
+.menu-button-label, .menu-button:before, .menu-button:after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
 }
-  
+
+.menu-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+}
+
+.menu-button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+}
+
 .menu-link, .trends-title-link {
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
 }
-  
+
 .headline-wrapper {
     max-width: 700px;
-    margin: 100px auto 0;  
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;  
 }
-  
+
 .headline {
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 45px;
-    line-height: 1.7;
+    font-size: 26px;
+    line-height: 1.4;
     text-align: center;
 }
-  
+
 .trends-wrapper {
     width: 100%;
-    margin-top: 57px;
+    margin-top: 45px;
 }
-  
+
 .main-section-title {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.trend-garden {
+    background-image: url("../images/trend1.jpg");
+}
   
+.trend-cheese {
+    background-image: url("../images/trend2.jpg");
+}
+  
+.trend-hiking {
+    background-image: url("../images/trend3.jpg");
+}
+  
+.trend-lemons {
+    background-image: url("../images/trend4.jpg");
+}
+
 .trends {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 640px) {
+    .header-content {
+        flex-direction: column-reverse;
+    }
+    .logo {
+        margin: 175px 0 28px 0;
+    }
+    .headline-wrapper {
+        padding: 0 30px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .close-button {
+        width: 32px;
+        height: 32px;
+    }
+    .form-hint {
+        margin: 23px 0 9px;
+    }
+    .radio-text:before {
+        height: 18px;
+        width: 18px;
+        background-size: 18px;
+    }
+  
+     .radio-text {
+        margin-right: 15px;
+    }
+    .header {
+        background-image: url("../images/banner-bg.jpg");
+        padding-top: 30px;
+        padding-bottom: 125px;
+    }  
+    .logo {
+        width: 180px;
+    }
+    .menu-list {
+        display: flex;
+        list-style-type: none;
+        font-size: 13px;
+    }
+      
+    .menu-list-item:nth-child(n+2) {
+        margin-left: 35px;
+    }
+      
+    .menu-list-item:hover {
+        text-decoration: underline;
+    }
+    .menu-button {
+        display: none;
+    }
+    .trends-card-wrapper:nth-child(n+2) {
+        margin-left: 4px;
+    }
+    .headline-wrapper {
+        margin: 100px auto 0;  
+    }
+    .headline {
+        font-size: 45px;
+        line-height: 1.7;    
+    }
+    .trends-wrapper {
+        margin-top: 57px;
+    }
+    .main-section-title {
+        font-size: 20px;
+    }
 }
   
 .trends-card-wrapper {
@@ -288,23 +397,8 @@ textarea.field {
     padding: 15px 20px;
 }
   
-.trend-garden {
-    background-image: url("../images/trend1.jpg");
-}
-  
-.trend-cheese {
-    background-image: url("../images/trend2.jpg");
-}
-  
-.trend-hiking {
-    background-image: url("../images/trend3.jpg");
-}
-  
-.trend-lemons {
-    background-image: url("../images/trend4.jpg");
-}
-  
 .trends-card {
+    box-sizing: border-box;
     border: 3px solid #b59f5b;
     padding: 33px 33px;
     flex-grow: 1;
@@ -687,78 +781,6 @@ textarea.field {
     font-size: 12px;
     font-weight: bold;
 }
-
-
-
-@media (min-width: 1200px) {
-  
-    .menu-button {
-        display: none;
-    }
-
-    .trends-card-wrapper:nth-child(n+2) {
-        margin-left: 4px;
-    }
-}
-
- @media (max-width: 1199px) {
-    
-    .close-button {
-        height: 28px;
-        width: 28px;
-        top: -36px;
-    }
-  
-    .radio-text:before {
-        height: 25px;
-        width: 25px;
-        background-size: 25px;
-    }
-  
-     .radio-text {
-        margin-right: 30px;
-    }
-  
-    .form-hint {
-        margin: 25px 0 9px;
-    }
-  
-    .menu-list {
-        display: none;
-    }
-  
-    .menu {
-        display: flex;
-    }
-  
-    .menu-button {
-        border: none;
-        width: 22px;
-        height: 19px;
-        background-color: transparent;
-        position: relative;
-        cursor: pointer;
-    }
-  
-    .menu-button-label, .menu-button:before, .menu-button:after {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #ffffff;
-    }
-  
-    .menu-button:before {
-        content: "";
-        position: absolute;
-        top: 0;
-    }
-  
-    .menu-button:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-    }
-}
   
 @media (min-width: 641px) and (max-width: 1199px) {
   
@@ -783,10 +805,6 @@ textarea.field {
     .headline {
         font-size: 40px;
         line-height: 1.4;
-    }
-  
-    .trends-wrapper {
-        margin-top: 45px;
     }
   
     .trends-card {
@@ -962,17 +980,8 @@ textarea.field {
 }
   
   @media (max-width: 640px) {
-  
     .feedback-form {
         padding: 27px 24px 32px;
-    }
-  
-    .close-button {
-        top: -32px;
-    }
-  
-    textarea.field {
-        resize: none;
     }
 
     .popup-container {
@@ -984,33 +993,8 @@ textarea.field {
         padding-right: 15px;
     }
   
-    .header {
-        background-image: url("../images/banner-mobile.jpg");
-        padding-top: 30px;
-        padding-bottom: 210px;
-    }
-  
-    .header-content {
-        flex-direction: column-reverse;
-    }
-  
     .menu {
         align-self: flex-end;
-    }
-  
-    .logo {
-        width: 270px;
-        margin: 175px 0 28px 0;
-    }
-  
-    .headline-wrapper {
-        padding: 0 30px;
-        margin-top: 0;
-    }
-  
-    .headline {
-        font-size: 26px;
-        line-height: 1.4;
     }
   
     .trends-section-wrapper {
@@ -1019,10 +1003,6 @@ textarea.field {
   
     .news-wrapper {
         width: 100%;
-    }
-  
-    .main-section-title {
-        font-size: 16px;
     }
   
     .underline:after {
