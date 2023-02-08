@@ -721,6 +721,33 @@ textarea.field {
     font-weight: bold;
 }
 
+@media screen and (max-width: 641px) and (orientation: landscape) {
+
+    .trends-card-wrapper {
+        flex-basis: 49%;
+        flex-grow: 1;
+        min-height: 247px;
+        padding: 15px 19px;
+        margin-top: 0; 
+        margin-bottom: 4px;
+    }
+    .trends-card-wrapper:nth-child(2n+1) {
+        margin-right: 4px;
+    }
+    .trends {
+        margin-top: 18px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 641px) and (orientation: portrait) {
+    .trends, .main, .news, .crafts {
+        flex-direction: column;
+    }
+}
+
+
 @media screen and (max-width: 640px) {
 
     .main, .news, .crafts {
@@ -744,7 +771,7 @@ textarea.field {
     .menu {
         align-self: flex-end;
     }
-    .trends-section-wrapper {
+    .trends-wrapper {
         margin-top: 40px;
     }
 }
@@ -757,30 +784,7 @@ textarea.field {
     .crafts-wrapper {
         flex-direction: column;
     }
-    @media screen and (max-height: 641px) and (orientation: landscape) {
-
-        .trends-card-wrapper {
-            flex-basis: 49%;
-            flex-grow: 1;
-            min-height: 247px;
-            padding: 15px 19px;
-            margin-top: 0; 
-            margin-bottom: 4px;
-        }
-        .trends-card-wrapper:nth-child(2n+1) {
-            margin-right: 4px;
-        }
-        .trends {
-            margin-top: 18px;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-    }
-    @media screen and (orientation: portrait) {
-        .trends{
-            flex-direction: column;
-        }
-    }
+    
 }
 
 @media screen and (min-width: 641px) and (max-width: 1050px) {
@@ -804,55 +808,9 @@ textarea.field {
     }
 }
 
-@media screen and (min-width: 761px) and (max-width: 1199px) {
-  
-    .crafts-card-wrapper {
-        width: calc(50% - 10px);
-    }
-    @media only screen and (orientation: landscape)  {
-
-        .trends-card-wrapper:nth-child(n+2) {
-            margin-left: 4px;
-        }
-        .news {
-            border-bottom: none;
-            flex-direction: column;
-        }
-        .news-img {
-            width: 100%;
-            min-width: 0;
-            max-width: 380px;
-        }
-        .news-content {
-            margin-left: 0;
-            margin-top: 10px;
-        }
-    }
-    
-    @media only screen and (orientation: portrait) {
-
-        .trends {
-            margin-top: 18px;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .trends-card-wrapper {
-            flex-basis: 49%;
-            flex-grow: 1;
-            min-height: 247px;
-            padding: 15px 19px;
-            margin-top: 0; 
-            margin-bottom: 4px;
-        }
-    
-        .trends-card-wrapper:nth-child(2n+1) {
-            margin-right: 4px;
-        }
-    }
-}
-
 @media screen and (min-width: 641px) and (max-width: 1199px) {
 
+    
     .side-menu-section:nth-child(n+2) {
         margin-top: 60px;
     }
@@ -947,6 +905,55 @@ textarea.field {
     }
     .copyright {
         margin: 20px auto 0;
+    }
+    @media screen and (max-width: 1199px) and (orientation: landscape)  {
+        .trends-card-wrapper {
+            width: 25%; 
+        }
+        .trends-card-wrapper:nth-child(n+2) {
+            margin-left: 4px;
+        }
+        .trends-card {
+            max-width: 100%;
+        }
+        .trends-title-link {
+            font-size: 12px;
+        }
+        .news {
+            border-bottom: none;
+            flex-direction: column;
+        }
+        .news-img {
+            width: 100%;
+            min-width: 0;
+            max-width: 380px;
+        }
+        .news-content {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+    @media screen and (max-width: 1199px) and (orientation: portrait) {
+        .crafts-card-wrapper {
+            width: calc(50% - 10px);
+        }
+        .trends {
+            margin-top: 18px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .trends-card-wrapper {
+            flex-basis: 49%;
+            flex-grow: 1;
+            min-height: 247px;
+            padding: 15px 19px;
+            margin-top: 0; 
+            margin-bottom: 4px;
+        }
+    
+        .trends-card-wrapper:nth-child(2n+1) {
+            margin-right: 4px;
+        }
     }
 }
 
