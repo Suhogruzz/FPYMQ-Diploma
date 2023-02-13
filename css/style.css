@@ -726,8 +726,7 @@ textarea.field {
     .trends-card-wrapper {
         flex-basis: 49%;
         flex-grow: 1;
-        min-height: 247px;
-        padding: 15px 19px;
+        max-width: 49%;
         margin-top: 0; 
         margin-bottom: 4px;
     }
@@ -907,6 +906,10 @@ textarea.field {
         margin: 20px auto 0;
     }
     @media screen and (max-width: 1199px) and (orientation: landscape)  {
+
+        .trends {
+            margin-top: 18px;
+        }
         .trends-card-wrapper {
             width: 25%; 
         }
